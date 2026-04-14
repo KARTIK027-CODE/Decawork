@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}IT Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p style="text-align: center;">Welcome back, <strong>{{ user.name }}</strong> ({{ user.email }})</p>
+<div class="actions">
+    <nav>
+        <ul>
+            <li><a href="/users">Manage Users</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}

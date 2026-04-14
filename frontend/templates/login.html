@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}IT Admin Login{% endblock %}
+{% block content %}
+<h1>Login</h1>
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}
+<form action="/login" method="post">
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="admin@company.com" required>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required>
+    </div>
+    <button type="submit">Login</button>
+</form>
+{% endblock %}
